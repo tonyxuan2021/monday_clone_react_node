@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import AvatarDisplay from "./AvatarDisplay";
+import DeleteBlock from "./DeleteBlock";
+import PriorityDisplay from "./PriorityDisplay";
+import ProgressDisplay from "./ProgressDisplay";
+import StatusDisplay from "./StatusDisplay";
 
-const TIcketCard = () => {
+const TicketCard = () => {
   return (
-    <div>TIcketCard</div>
-  )
-}
+    <div className="ticket-card">
+      <Link>
+        <div className="ticket-color"> </div>
+        <h3>title</h3>
+        <AvatarDisplay />
+        <StatusDisplay />
+        <PriorityDisplay />
+        <ProgressDisplay />
+      </Link>
+      <DeleteBlock />
+    </div>
+  );
+};
 
-export default TIcketCard
+export default TicketCard;
